@@ -6,7 +6,7 @@
 **CryptoSentiment Pulse** is a Full-Stack Data Analytics dashboard that provides real-time cryptocurrency tracking combined with Natural Language Processing (NLP) to gauge market sentiment.
 
 ### 🚀 Live Demo
-[Insert your Deployment URL here]
+[Click here to view the App](https://cryptosentiment-pulse.streamlit.app)
 
 ---
 
