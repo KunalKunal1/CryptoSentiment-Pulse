@@ -2,6 +2,10 @@ import streamlit as st
 import plotly.express as px
 from src import api_client, nlp_engine, db_manager
 
+import subprocess
+import sys
+subprocess.check_call([sys.executable, "-m", "textblob.download_corpora"])
+# -------------------------
 # Page Config
 st.set_page_config(
     page_title="CryptoSentiment Pulse",
@@ -69,7 +73,7 @@ if not df_sentiment.empty:
     avg_score = df_sentiment['Score'].mean()
     st.info(f"Overall Sentiment Score: {avg_score:.2f} (Scale: -1 to 1)")
 
-# 4. Database Insights (Search History)
+# 4. Database (Search History)
 st.markdown("---")
 st.subheader("🔍 Popular Searches (From Local DB)")
 top_searches = db_manager.get_top_searches()
